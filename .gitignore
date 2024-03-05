@@ -1,0 +1,12 @@
+.idea/
+.vscode/
+/coverage/
+/vendor/
+/logs/*
+node_modules
+!/logs/README.md
+.phpunit.result.cache
+.env
+dist
+public/assets
+public/manifest.json

@@ -1,0 +1,27 @@
+openapi: 3.0.0
+info:
+  title: API
+  version: '0.1'
+paths:
+  /api/v1/postal_codes:
+    get:
+      operationId: 'Get All Postal Codes'
+      responses:
+        '200':
+          description: 'Return paginated list'
+    post:
+      operationId: 'Create Postal Code'
+      responses:
+        '200':
+          description: 'Return post code'
+  '/api/v1/postal_codes/{code}':
+    get:
+      operationId: 'Get Postal Code'
+      responses:
+        '200':
+          description: 'Return postal code'
+    delete:
+      operationId: 'Delete Postal Code'
+      responses:
+        '204':
+          description: ''
