@@ -28,7 +28,7 @@
         "ext-zip": "*",
         "monolog/monolog": "^2.8",
         "openspout/openspout": "^4.23",
-        "php-di/php-di": "^6.4",
+        "php-di/php-di": "^7.0",
         "phpoffice/phpspreadsheet": "^2.0",
         "slim/php-view": "^3.2",
         "slim/psr7": "^1.5",
