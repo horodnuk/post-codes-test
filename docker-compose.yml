@@ -1,18 +1,50 @@
-version: '3.7'
-
-volumes:
-    logs:
-        driver: local
+networks:
+  docker.network:
+    driver: bridge
 
 services:
-    slim:
-        image: php:7-alpine
-        working_dir: /var/www
-        command: php -S 0.0.0.0:8080 -t public
-        environment:
-            docker: "true"
-        ports:
-            - "8080:8080"
-        volumes:
-            - .:/var/www
-            - logs:/var/www/logs
+  php:
+    build: ./docker/php
+    restart: unless-stopped
+    container_name: docker.php
+    tty: true
+    depends_on:
+      - mysql
+    networks:
+      - docker.network
+    volumes:
+      - .:/var/www
+
+  nginx:
+    build: ./docker/nginx
+    container_name: docker.nginx
+    restart: unless-stopped
+    tty: true
+    depends_on:
+      - php
+    ports:
+      - "4333:433"
+      - "8080:80"
+    networks:
+      - docker.network
+    volumes:
+      - .:/var/www
+
+  mysql:
+    image: mysql:8
+    restart: unless-stopped
+    container_name: docker.mysql
+    tty: true
+    ports:
+      - "3306:3306"
+    networks:
+      - docker.network
+    volumes:
+      - "./docker/mysql/mysql.cnf:/etc/mysql/conf.d/custom.cnf:ro"
+      - "./docker/mysql/dbdata:/var/lib/mysql"
+      - "./docker/mysql/init_db.sql:/docker-entrypoint-initdb.d/schema.sql:ro"
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-development}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-root}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-mysql}
+      MYSQL_USER: ${MYSQL_USER:-mysql}
