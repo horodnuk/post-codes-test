@@ -32,6 +32,7 @@ services:
 
   mysql:
     image: mysql:8
+    hostname: mysql_host
     restart: unless-stopped
     container_name: docker.mysql
     tty: true
@@ -42,7 +43,7 @@ services:
     volumes:
       - "./docker/mysql/mysql.cnf:/etc/mysql/conf.d/custom.cnf:ro"
       - "./docker/mysql/dbdata:/var/lib/mysql"
-      - "./docker/mysql/init_db.sql:/docker-entrypoint-initdb.d/schema.sql:ro"
+      - "./docker/mysql/init_db.sql:/docker-entrypoint-initdb.d/schema.sql"
     environment:
       MYSQL_DATABASE: ${MYSQL_DATABASE:-development}
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-root}

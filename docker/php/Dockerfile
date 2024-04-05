@@ -77,7 +77,7 @@ COPY ./entrypoint /usr/local/bin/docker-entrypoint
 RUN chmod +x /usr/local/bin/docker-entrypoint
 
 # Workdir
-ENV WORKDIR=/var/www/app
+ENV WORKDIR=/var/www
 RUN mkdir -p ${WORKDIR}
 WORKDIR ${WORKDIR}
 
