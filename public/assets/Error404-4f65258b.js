@@ -1,0 +1,1 @@
+import{_ as e,aY as s,E as t,B as a,aU as r,D as c,aW as o}from"./app-557641c9.js";const n={},l={class:"flex flex-center justify-center full-height"},_=o("h1",null,"404",-1);function d(f,i){return c(),s("div",l,[t(r,{class:"q-pa-lg rounded-borders"},{default:a(()=>[_]),_:1})])}const h=e(n,[["render",d]]);export{h as default};

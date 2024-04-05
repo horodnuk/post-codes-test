@@ -1,0 +1,67 @@
+{
+  "_use-quasar-ccd3af04.js": {
+    "file": "assets/use-quasar-ccd3af04.js",
+    "imports": [
+      "assets/js/app.js"
+    ]
+  },
+  "assets/js/app.css": {
+    "file": "assets/app-e4b4b963.css",
+    "src": "assets/js/app.css"
+  },
+  "assets/js/app.js": {
+    "css": [
+      "assets/app-e4b4b963.css"
+    ],
+    "dynamicImports": [
+      "assets/js/layouts/DefaultLayout.vue",
+      "assets/js/pages/PostalCodesList.vue",
+      "assets/js/pages/PostalCodeView.vue",
+      "assets/js/pages/Error404.vue"
+    ],
+    "file": "assets/app-432d3717.js",
+    "isEntry": true,
+    "src": "assets/js/app.js"
+  },
+  "assets/js/layouts/DefaultLayout.vue": {
+    "file": "assets/DefaultLayout-cc9459a9.js",
+    "imports": [
+      "assets/js/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "assets/js/layouts/DefaultLayout.vue"
+  },
+  "assets/js/pages/Error404.vue": {
+    "file": "assets/Error404-06514f31.js",
+    "imports": [
+      "assets/js/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "assets/js/pages/Error404.vue"
+  },
+  "assets/js/pages/PostalCodeView.vue": {
+    "file": "assets/PostalCodeView-40d133de.js",
+    "imports": [
+      "assets/js/app.js",
+      "_use-quasar-ccd3af04.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "assets/js/pages/PostalCodeView.vue"
+  },
+  "assets/js/pages/PostalCodesList.css": {
+    "file": "assets/PostalCodesList-251c08cf.css",
+    "src": "assets/js/pages/PostalCodesList.css"
+  },
+  "assets/js/pages/PostalCodesList.vue": {
+    "css": [
+      "assets/PostalCodesList-251c08cf.css"
+    ],
+    "file": "assets/PostalCodesList-5e6997e1.js",
+    "imports": [
+      "assets/js/app.js",
+      "_use-quasar-ccd3af04.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "assets/js/pages/PostalCodesList.vue"
+  }
+}
