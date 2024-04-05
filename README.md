@@ -10,3 +10,4 @@ Configure projects:
 ``` php
 php bin/console.php app:postal_code:import {file_path}
 ```
+8. Open ```http://0.0.0.0:8080/```
